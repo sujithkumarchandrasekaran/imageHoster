@@ -28,8 +28,8 @@ public class ImageService {
 
     public List<Image> getAllImages() {
 
-        return new ImageService().images;
-//        return imageRepository.getAllImages();
+//        return new ImageService().images;
+        return imageRepository.getAllImages();
     }
 
 
