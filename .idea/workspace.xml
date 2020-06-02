@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/repository/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/ImageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/ImageService.class" afterDir="false" />
-    </list>
+    <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +129,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -162,7 +156,7 @@
       <workItem from="1590689508581" duration="5554000" />
       <workItem from="1590822216131" duration="8158000" />
       <workItem from="1590934084783" duration="1082000" />
-      <workItem from="1591077272559" duration="10785000" />
+      <workItem from="1591077272559" duration="11041000" />
     </task>
     <servers />
   </component>
