@@ -1,6 +1,9 @@
 package ImageHoster.service;
 
 import ImageHoster.model.Image;
+import ImageHoster.repository.UserRepository;
+import ImageHoster.repository.ImageRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,6 +12,9 @@ import java.util.List;
 
 @Service
 public class ImageService {
+
+    @Autowired
+    private ImageRepository imageRepository;
 
     private List<Image> images = new ArrayList<>();
 
@@ -28,7 +34,7 @@ public class ImageService {
     //The method does not store the image in the database
     public void uploadImage(Image image) {
         //Simply return from this method as this method does not currently store the image in the database
-        return;
-    }
+        imageRepository.uploadImage(image);
+        }
 
 }

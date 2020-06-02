@@ -60,29 +60,26 @@ public class ImageController {
     }
 
     //This controller method is called when the request pattern is of type 'images/upload' and also the incoming request is of POST type
-    //The method receives all the details of the image to be stored in the database, but currently we are not using database so the business logic simply retuns null and does not store anything in the database
-    //After you get the imageFile, convert it to Base64 format and store it as a string
+    //The method receives all the details of the image to be stored in the database, and now the image will be sent to the business logic to be persisted in the database
+    //After you get the imageFile, set the user of the image by getting the logged in user from the Http Session with 'loggeduser' as the key
+    //Convert the image to Base64 format and store it as a string in the 'imageFile' attribute
+    //Set the date on which the image is posted
     //After storing the image, this method directs to the logged in user homepage displaying all the images
     @RequestMapping(value = "/images/upload", method = RequestMethod.POST)
-    public String createImage(@RequestParam("file") MultipartFile file, Image newImage) throws IOException {
+    public String createImage(@RequestParam("file") MultipartFile file, Image newImage, HttpSession session) throws IOException {
 
-        //Complete the method
-        //Encode the imageFile to Base64 format and set it as the imageFile attribute of the newImage
-        //Set the date attribute of newImage
-        //Call the business logic to upload an image which currently does not store the image in the database
-        //After uploading the image direct to the logged in user homepage displaying all the images
-
-                newImage.setImageFile(convertUploadedFileToBase64(file));
-                newImage.setDate(new Date());
-                imageService.uploadImage(newImage);
-                return "redirect:/images";
-
+        User user = (User) session.getAttribute("loggeduser");
+        newImage.setUser(user);
+        String uploadedImageData = convertUploadedFileToBase64(file);
+        newImage.setImageFile(uploadedImageData);
+        newImage.setDate(new Date());
+        imageService.uploadImage(newImage);
+        return "redirect:/images";
     }
+
 
     //This method converts the image to Base64 format
     private String convertUploadedFileToBase64(MultipartFile file) throws IOException {
         return Base64.getEncoder().encodeToString(file.getBytes());
     }
-
-
 }
