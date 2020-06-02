@@ -54,9 +54,12 @@ public class ImageRepository {
     //Executes JPQL query to fetch the image from the database with corresponding title
     //Returns the image in case the image is found in the database
     //Returns null if no image is found in the database
-//    public Image getImageByTitle(String title) {
-//        //Complete the code
-//    }
+    public Image getImageByTitle(String title) {
+        //Complete the code
+        EntityManager em = emf.createEntityManager();
+        return em.find(Image.class, title);
+
+    }
 
 
 
