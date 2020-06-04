@@ -44,5 +44,19 @@ public class ImageService {
         return imageRepository.getImageByTitle(title);
     }
 
+    //The method calls the getImage() method in the Repository and passes the id of the image to be fetched
+    public Image getImage(Integer imageId) {
+        //Complete the method
+        return imageRepository.getImage(imageId);
+    }
+
+    //The method calls the updateImage() method in the Repository and passes the Image to be updated in the database
+    public void updateImage(Image updatedImage) {
+        //Complete the method
+
+         imageRepository.updateImage(updatedImage);
+
+
+    }
 
 }
